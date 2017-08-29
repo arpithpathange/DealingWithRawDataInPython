@@ -1,5 +1,5 @@
-from readJson import read
 import simplejson as json
+from readJson import read
 
 class changemeanbetRange:
 
