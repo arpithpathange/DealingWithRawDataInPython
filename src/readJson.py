@@ -10,3 +10,4 @@ class read:
             parserJson = json.load(json_data)
             self.colname = parserJson['column_names']
             self.rawdata = parserJson['data']
+
