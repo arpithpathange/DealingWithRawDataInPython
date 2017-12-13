@@ -41,7 +41,7 @@ class plotyearlydata:
 
 
 
-year = 1984
+
 readdata = plotyearlydata()
 avglist = []
 yearlist = []
