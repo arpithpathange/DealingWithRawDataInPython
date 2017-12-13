@@ -3,6 +3,7 @@ __author__ = 'arpith.pathange'
 from datetime import date
 import datetime
 from readJson import read
+import calendar
 import matplotlib.pyplot as plt
 
 
@@ -21,13 +22,12 @@ class monthlytopandlow:
         date_format = "YYYY-MM-DD"
         self.readJson.readRawData()
         print "Max "+ "min "+ "Month "
-        for i in range(1,12):
-            #d1 = '2016,'+str(i)+',01'
-            #year = 2016
-            day = 01
-            j = i+1
-            d1 = datetime.date(int(year),int(i),int(day))
-            d2 = datetime.date(int(year),int(j),int(day))
+        for i in range(1,13):
+
+            monthStartdate = 01
+            monthEnddate = calendar.monthrange(2017,i)[1]
+            d1 = datetime.date(int(year),int(i),int(monthStartdate))
+            d2 = datetime.date(int(year),int(i),monthEnddate)
             self.getdataforamonth(d1, d2)
             print max(self.monthhighdata), min(self.monthlowdata), i
             self.monthlowdata = []
